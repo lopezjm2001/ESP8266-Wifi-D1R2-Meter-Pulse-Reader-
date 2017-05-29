@@ -37,7 +37,7 @@ The photosensitive sensor module is stuck on to the meter using bluetack and mor
 
 Adjust the pot on the photosensitive light sensor module with a watch screwdriver until you see a red LED go on and off when the module sees the meter red light flash. Experiment until you get best results. 
 
-Need to add ZIP files to Arduino program library for the sketch to work, from the two links below: 
+You will need to add ZIP files to your Arduino program library for the sketch to work, from the two links below: 
 
 https://github.com/PaulStoffregen/Time/tree/18ce15b202641771eec6ec3f4687aead5069d2d8 and
 https://github.com/arduino-libraries/NTPClient/tree/7016636dba0270c16fc639bb5612b07171826ddf
