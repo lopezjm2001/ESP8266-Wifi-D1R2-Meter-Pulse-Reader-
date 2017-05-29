@@ -19,9 +19,9 @@ ppws(pulse per watt second) = 1
 
 This project uses an Arduino ESP8266 Wifi D1 from Wemos like this one http://www.instructables.com/id/Programming-the-WeMos-Using-Arduino-SoftwareIDE/.
 
-And an Arduino light photosensitive sensor with a digital output 3.3volts from ebay like this one http://www.ebay.com.au/itm/161869818445?_trksid=p2060353.m1438.l2649&ssPageName=STRK%3AMEBIDX%3AIT. 
+And an Arduino light photosensitive sensor module with a digital output 3.3volts from ebay like this one http://www.ebay.com.au/itm/161869818445?_trksid=p2060353.m1438.l2649&ssPageName=STRK%3AMEBIDX%3AIT. 
 
-A digital input interrupt request is used on the falling edge of the pulse signals. The time is measured between falling edges in micro-seconds. A software filter is used to ignore falling edges from noise if the measured time between pulses is less than 180mS. 180mS is set for a maximum 20kw power reading.
+A digital input interrupt request is used on the falling edge of any two consecutive pulse signals to measure the time between pulses. The time is measured between falling edges in micro-seconds. A software filter is used to ignore falling edges from noise if the measured time between pulses is less than 180mS. 180mS is set for a maximum 20kw power reading.
 
 Wiring connections (see attached photos of meter) :
 
