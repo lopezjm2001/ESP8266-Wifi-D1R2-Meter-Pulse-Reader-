@@ -3,7 +3,7 @@ This project is about reading the red light pulses from a digital electricity me
 
 The Energy KWH is derived simply by adding the number of pulses over a period of time. 1kwh = 1000 pulses.
 
-Hence power is calculated over a period of time between any two pulses.
+Hence power is calculated over a period of time between any two consecutive pulses.
 
 Energy(1kwh) = Power(1kw) x time(1hour)
 
