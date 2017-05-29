@@ -1,4 +1,4 @@
-ESP8266-Wifi-D1R2-Meter-Pulse-Reader-Sketch
+ ESP8266-Wifi-D1R2-Meter-Pulse-Reader-Sketch
 This project is about reading the red light pulses from a digital electricity meter e.g. Elster A1100. The light pulses will give the user the values of power and energy being imported or exported at the moment of time. 1000 pulses = 1kWh, The time measured between pulses gives the current power reading. The Elster A1100 meter is a nett meter and will produce light pulses for both import and export. 
 
 The Energy KWH is derived simply by adding the number of pulses over a period of time. 1kwh = 1000 pulses.
@@ -13,7 +13,7 @@ Power(1kW) = Energy(1kWh) / time(1hour)
 
 power(watts) = (3600000000.0 / (pulseTime(micro seconds) - lastTime(micro seconds)) / ppws
 
-1kwh = 1000 pulses
+1kwh = 1000 pulse
 
 ppws(pulse per watt second) = 1 
 
@@ -30,7 +30,10 @@ Wiring connections (see attached photos of meter https://github.com/lopezjm2001/
 3. Black wire - ground wire connects to (GND) between photosensor module and the ESP8266wifi D1R2.
 4. I used a white wire as an add on antenna.
 
-The photosensitive sensor module is stuck on to the meter using bluetack and more added to light sensor making sure the light sensor is fully covered so daylight cannot penetrate the bluetack. Light sensor must be directly above red light of meter. I bent the light sensor pins so it faces down.
+I bent the pins of the photo sensor so it faces down so that when placed directly above the meter red light it gets full red light.
+The photosensitive sensor module is stuck on to the meter using bluetack and more bluetack is added to light sensor making sure the light sensor is fully covered so daylight cannot penetrate the bluetack. Light sensor must be directly above red light of meter.
+
+Adjust the pot on the photosensitive light sensor module with a watch screwdriver until you see a red LED go on and off when the module sees the meter red light flash. Experiment until you get best results. 
 
 Need to add ZIP files to Arduino program library for the sketch to work, from the two links below: 
 
