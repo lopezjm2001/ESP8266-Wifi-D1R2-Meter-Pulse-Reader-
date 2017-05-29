@@ -28,6 +28,9 @@ Wiring connections (see attached photos of meter https://github.com/lopezjm2001/
 1. Yellow wire - The digital output (DO) of light photosensor module is connected to pin 4(SCL/D1) of the ESP8266wifi D1R2.
 2. Red wire - The 3.3V positive supply, (VCC) of photosensor module to (3.3v) on the ESP8266wifi D1R2. 
 3. Black wire - ground wire connects to (GND) between photosensor module and the ESP8266wifi D1R2.
+4. I used a white wire as an add on antenna.
+
+The photosensitive sensor module is stuck on to the meter using bluetack and more added to light sensor making sure the light sensor is fully covered so daylight cannot penetrate the bluetack. Light sensor must be directly above red light of meter. I bent the light sensor pins so it faces down.
 
 Need to add ZIP files to Arduino program library for the sketch to work, from the two links below: 
 
