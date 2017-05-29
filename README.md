@@ -1,4 +1,4 @@
- ESP8266-Wifi-D1R2-Meter-Pulse-Reader-Sketch
+ESP8266-Wifi-D1R2-Meter-Pulse-Reader-Sketch
 This project is about reading the red light pulses from a digital electricity meter e.g. Elster A1100. The light pulses will give the user the values of power and energy being imported or exported at the moment of time. 1000 pulses = 1kWh, The time measured between pulses gives the current power reading. The Elster A1100 meter is a nett meter and will produce light pulses for both import and export. 
 
 The Energy KWH is derived simply by adding the number of pulses over a period of time. 1kwh = 1000 pulses.
@@ -22,6 +22,8 @@ This project uses an Arduino ESP8266 Wifi D1 from Wemos like this one http://www
 And an Arduino light photosensitive sensor module with a digital output 3.3volts from ebay like this one http://www.ebay.com.au/itm/161869818445?_trksid=p2060353.m1438.l2649&ssPageName=STRK%3AMEBIDX%3AIT. 
 
 A digital input interrupt request is used on the falling edge of any two consecutive pulse signals to measure the time between pulses. The time is measured between falling edges in micro-seconds. A software filter is used to ignore falling edges from noise if the measured time between pulses is less than 180mS. 180mS is set for a maximum 20kw power reading.
+
+The program has a 'heartbeat' which indicates that the program is constantly looping. The blue power LED on the ESP8266wifi will blink constantly for one second. If the blinking stops then the program has halted.
 
 Wiring connections (see attached photos of meter https://github.com/lopezjm2001/ESP8266-Wifi-D1R2-Meter-Pulse-Reader-/blob/master/Elster%20A1100%20meter%201.JPG) :
 
