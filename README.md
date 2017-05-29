@@ -6,10 +6,13 @@ The Energy KWH is derived simply by adding the number of pulses over a period of
 Hence power is calculated over a period of time between any two pulses.
 
 Energy(1kwh) = Power(1kw) x time(1hour)
-Power(1kW) = Energy(1kWh) / time(1hour), 
+Power(1kW) = Energy(1kWh) / time(1hour),
+
 1 hour = 60min x 60sec = 3600 seconds = 3600000 milliSeconds = 3600000000 microSeconds
+
 power(watts) = (3600000000.0 / (pulseTime(micro seconds) - lastTime(micro seconds)) / ppws
 1kwh = 1000 pulses
+
 ppws(pulse per watt second) = 1 
 
 This project uses an Arduino ESP8266 Wifi D1 from Wemos like this one http://www.instructables.com/id/Programming-the-WeMos-Using-Arduino-SoftwareIDE/.
