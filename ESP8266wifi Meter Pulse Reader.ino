@@ -17,8 +17,8 @@ int pulse = 0;
 int sw = 0; // 0 - serial connected, 1 - serial disconected. Must be disconnected from mini USB otherwise program will hang.
 String result;
 String Directory = "GET /service/r2/addstatus.jsp";
-String MySID = "51923";// your system ID for pvoutput must be placed here.
-String MyKey = "1ca25ec13241e202c4bc939fc4a1323b050ba8bd"; // your SSID key for pvoutput must be placed here.
+String MySID = "12345";// your system ID for pvoutput must be placed here.
+String MyKey = "1ca25ec13241e202c4bc939fc4a1323b050ba8bd"; // your API key for pvoutput must be placed here.
 String months, days, hours, mins, EG, PG, EU, PU, Temp, volts, IMP;
 
 const unsigned int meter_pulses = 1000; // set for your meter eg 1000/kWh, 800/kWh for Sprint meters
