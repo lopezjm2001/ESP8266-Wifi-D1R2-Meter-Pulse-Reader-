@@ -12,11 +12,13 @@ Power(1kW) = Energy(1kWh) / time(1hour)
 1 hour = 60min x 60sec = 3600 seconds = 3600000 milliSeconds = 3600000000 microSeconds
 
 power(watts) = (3600000000.0 / (pulseTime(micro seconds) - lastTime(micro seconds)) / ppws
+
 1kwh = 1000 pulses
 
 ppws(pulse per watt second) = 1 
 
 This project uses an Arduino ESP8266 Wifi D1 from Wemos like this one http://www.instructables.com/id/Programming-the-WeMos-Using-Arduino-SoftwareIDE/.
+
 And an Arduino light photosensitive sensor with a digital output 3.3volts from ebay like this one http://www.ebay.com.au/itm/161869818445?_trksid=p2060353.m1438.l2649&ssPageName=STRK%3AMEBIDX%3AIT. 
 
 A digital input interrupt request is used on the falling edge of the pulse signals. The time is measured between falling edges in micro-seconds. A software filter is used to ignore falling edges from noise if the measured time between pulses is less than 180mS. 180mS is set for a maximum 20kw power reading.
