@@ -1,8 +1,16 @@
 ESP8266-Wifi-D1R2-Meter-Pulse-Reader-Sketch
-This project is about reading the red light pulses from a digital electricity meter e.g. Elster A1100. The light pulses will give the user the values of power and energy being imported or exported at the time. 1000 pulses = 1kWh, The time measured between pulses gives the current power reading. The Elster A1100 meter is a nett meter and will produce light pulses for both import and export. Hence power is calculated as shown below after determining the energy(kWh) reading by adding up the number of pulses over a period of time.
+This project is about reading the red light pulses from a digital electricity meter e.g. Elster A1100. The light pulses will give the user the values of power and energy being imported or exported at the moment of time. 1000 pulses = 1kWh, The time measured between pulses gives the current power reading. The Elster A1100 meter is a nett meter and will produce light pulses for both import and export. 
 
-Energy(kwh) = Power(kw) x time(hour)
-Power(kW) = Energy(kWh) / time(hour)
+The Energy KWH is derived simply by adding the number of pulses over a period of time. 1kwh = 1000 pulses.
+
+Hence power is calculated over a period of time between any two pulses.
+
+Energy(1kwh) = Power(1kw) x time(1hour)
+Power(1kW) = Energy(1kWh) / time(1hour), 
+1 hour = 60min x 60sec = 3600 seconds = 3600000 milliSeconds = 3600000000 microSeconds
+power(watts) = (3600000000.0 / (pulseTime(micro seconds) - lastTime(micro seconds)) / ppws
+1kwh = 1000 pulses
+ppws(pulse per watt second) = 1 
 
 This project uses an Arduino ESP8266 Wifi D1 from Wemos like this one http://www.instructables.com/id/Programming-the-WeMos-Using-Arduino-SoftwareIDE/.
 And an Arduino light photosensitive sensor with a digital output 3.3volts from ebay like this one http://www.ebay.com.au/itm/161869818445?_trksid=p2060353.m1438.l2649&ssPageName=STRK%3AMEBIDX%3AIT. 
