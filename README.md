@@ -6,7 +6,7 @@ And an Arduino light photosensitive sensor with a digital output 3.3volts from e
 Wiring connections (see attached photos of meter) :
 1. Yellow wire - The digital output (DO) of light photosensor module is connected to pin 4(SCL/D1) of the ESP8266wifi D1R2.
 2. Red wire - The 3.3V positive supply, (VCC) of photosensor module to (3.3v) on the ESP8266wifi D1R2. 
-3. Black wire - ground wire connects to GND between photosensor module and the ESP8266wifi D1R2.
+3. Black wire - ground wire connects to (GND) between photosensor module and the ESP8266wifi D1R2.
 
 Need to add ZIP files to Arduino program library for the sketch to work from here: 
 https://github.com/PaulStoffregen/Time/tree/18ce15b202641771eec6ec3f4687aead5069d2d8 and
