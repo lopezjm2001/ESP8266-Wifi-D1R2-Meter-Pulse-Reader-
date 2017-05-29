@@ -23,7 +23,7 @@ And an Arduino light photosensitive sensor module with a digital output 3.3volts
 
 A digital input interrupt request is used on the falling edge of any two consecutive pulse signals to measure the time between pulses. The time is measured between falling edges in micro-seconds. A software filter is used to ignore falling edges from noise if the measured time between pulses is less than 180mS. 180mS is set for a maximum 20kw power reading.
 
-Wiring connections (see attached photos of meter) :
+Wiring connections (see attached photos of meter https://github.com/lopezjm2001/ESP8266-Wifi-D1R2-Meter-Pulse-Reader-/blob/master/Elster%20A1100%20meter%201.JPG) :
 
 1. Yellow wire - The digital output (DO) of light photosensor module is connected to pin 4(SCL/D1) of the ESP8266wifi D1R2.
 2. Red wire - The 3.3V positive supply, (VCC) of photosensor module to (3.3v) on the ESP8266wifi D1R2. 
